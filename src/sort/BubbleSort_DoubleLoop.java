@@ -13,7 +13,7 @@ public class BubbleSort_DoubleLoop {
 		for(int i=0; i<arr.length-1; i++) {
 			for(int j = 0; j<num; j++) {
 				if(arr[j]>arr[j+1]) {
-					swap(arr,j,j+1);
+					swap(arr,j);
 				}
 			}
 			num--;
@@ -21,11 +21,11 @@ public class BubbleSort_DoubleLoop {
 		printSort(arr);
 	}
 	
-	private static void swap(int[] arr, int a, int b) {
+	private static void swap(int[] arr, int index) {
 		int tmp =0;
-		tmp = arr[b];
-		arr[b] = arr[a];
-		arr[a] = tmp;
+		tmp = arr[index+1];
+		arr[index+1] = arr[index];
+		arr[index] = tmp;
 	}
 	
 	private static void printSort(int[] arr) {
